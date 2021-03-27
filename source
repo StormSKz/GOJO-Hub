@@ -16,10 +16,10 @@ if _G.A == false then return end
 while _G.A do wait(0.00001)
 
     local string_1 = "swingKatana";
-local Target = game:GetService("Players").LocalPlayer.ninjaEvent;
-Target:FireServer(string_1);
-wait(0.00001)
-end
+    local Target = game:GetService("Players").LocalPlayer.ninjaEvent;
+    Target:FireServer(string_1);
+    wait(0.00001)
+    end
 end)
 
 tab:Toggle("Auto Sell", "Auto sells Ninjitsu", false, function(t)
@@ -32,7 +32,7 @@ while _G.A do wait(0.00001)
         wait(0.00001)
         game.workspace.sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Workspace.Part.CFrame
         end
-        end
+    end
 end)
     
 tab:Line()
@@ -45,7 +45,7 @@ if _G.A == false then return end
 while _G.A do wait()
     self.CFrame = game:GetService("Workspace").spawnedCoins.Valley["Blue Chi Crate"].CFrame
     wait()
-end
+    end
 end)
 
 tab:Toggle("Auto collect Coins"," ",false,function(t)
@@ -68,10 +68,10 @@ tab:Toggle("Auto Upgrades Swords", "Auto Buy Swords", false, function(t)
     while _G.A do wait()
 
         local string_1 = "buyAllSwords";
-local string_2 = "Inner Peace Island";
-local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
-Target:FireServer(string_1, string_2);
-end
+        local string_2 = "Inner Peace Island";
+        local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+        Target:FireServer(string_1, string_2);
+    end
 end)
 
 tab:Toggle("Auto Upgrades Belts", "Auto Buy Belts", false, function(t)
@@ -119,7 +119,7 @@ while _G.A do wait()
     local string_2 = "Inner Peace Island";
     local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
     Target:FireServer(string_1, string_2);
-end
+    end
 end)
 
 local tab = win:Tab("Boss Farm", "http://www.roblox.com/asset/?id=6023426945")
@@ -138,8 +138,8 @@ for i,v in pairs(game:GetService("Workspace").bossFolder:GetChildren()) do
             plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
             until v.Humanoid.Health <= 0 or _G.A == false
         end
-end
-end
+    end
+    end
 end)
 
 tab:Line()
