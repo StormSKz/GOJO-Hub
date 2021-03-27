@@ -16,10 +16,10 @@ if _G.A == false then return end
 while _G.A do wait(0.00001)
 
     local string_1 = "swingKatana";
-local Target = game:GetService("Players").LocalPlayer.ninjaEvent;
-Target:FireServer(string_1);
-wait(0.00001)
-end
+    local Target = game:GetService("Players").LocalPlayer.ninjaEvent;
+    Target:FireServer(string_1);
+    wait(0.00001)
+    end
 end)
 
 tab:Toggle("Auto Sell", "Auto sells Ninjitsu", false, function(t)
@@ -31,9 +31,9 @@ while _G.A do wait(0.00001)
         game.workspace.sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame
         wait(0.00001)
         game.workspace.sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Workspace.Part.CFrame
-        end
-        end
-    end)
+    end
+    end
+end)
     
 tab:Line()
 tab:Label("Auto collects")
@@ -47,6 +47,17 @@ while _G.A do wait()
     wait()
 end
 end)
+
+tab:Toggle("Auto collect Coins"," ",false,function(t)
+
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+        self.CFrame = game:GetService("Workspace").spawnedCoins.Valley["Purple Coin Crate"].CFrame
+        wait()
+    end
+end)
+
 tab:Line()
 tab:Label("Auto Upgrades")
 
@@ -57,10 +68,10 @@ tab:Toggle("Auto Upgrades Swords", "Auto Buy Swords", false, function(t)
     while _G.A do wait()
 
         local string_1 = "buyAllSwords";
-local string_2 = "Inner Peace Island";
-local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
-Target:FireServer(string_1, string_2);
-end
+        local string_2 = "Inner Peace Island";
+        local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+        Target:FireServer(string_1, string_2);
+    end
 end)
 
 tab:Toggle("Auto Upgrades Belts", "Auto Buy Belts", false, function(t)
@@ -108,7 +119,7 @@ while _G.A do wait()
     local string_2 = "Inner Peace Island";
     local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
     Target:FireServer(string_1, string_2);
-end
+    end
 end)
 
 local tab = win:Tab("Boss Farm", "http://www.roblox.com/asset/?id=6023426945")
@@ -127,8 +138,8 @@ for i,v in pairs(game:GetService("Workspace").bossFolder:GetChildren()) do
             plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
             until v.Humanoid.Health <= 0 or _G.A == false
         end
-end
-end
+    end
+    end
 end)
 
 tab:Line()
@@ -150,9 +161,9 @@ tab:Toggle("EternalBoss","",false,function(t)
             end
     end
     end
-    end)
+end)
 
-    tab:Line()
+tab:Line()
 
     tab:Toggle("RobotBoss"," ",false,function(t)
     
@@ -171,7 +182,7 @@ tab:Toggle("EternalBoss","",false,function(t)
             end
     end
     end
-    end)
+end)
     
 
 local tab = win:Tab("Teleport", "http://www.roblox.com/asset/?id=6023426945")
