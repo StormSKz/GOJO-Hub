@@ -1,0 +1,307 @@
+local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+
+local win = Flux:Window("Ninja Legends", "GOJO Hub", Color3.fromRGB(0, 0, 255), Enum.KeyCode.RightControl)
+local tab = win:Tab("MainFarm", "http://www.roblox.com/asset/?id=6023426945")
+
+local self = game.Players.LocalPlayer.Character.HumanoidRootPart
+local plr = game.Players.LocalPlayer
+local VirtualUser = game:GetService("VirtualUser")
+
+tab:Label("Ninja Legends Auto Farm")
+
+tab:Toggle("Auto swings", "Auto swings", false, function(t)
+
+_G.A = t 
+if _G.A == false then return end
+while _G.A do wait(0.00001)
+
+    local string_1 = "swingKatana";
+local Target = game:GetService("Players").LocalPlayer.ninjaEvent;
+Target:FireServer(string_1);
+wait(0.00001)
+end
+end)
+
+tab:Toggle("Auto Sell", "Auto sells Ninjitsu", false, function(t)
+    _G.A = t 
+if _G.A == false then return end
+while _G.A do wait(0.00001)
+
+        if game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart") then
+        game.workspace.sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame
+        wait(0.00001)
+        game.workspace.sellAreaCircles["sellAreaCircle16"].circleInner.CFrame = game.Workspace.Part.CFrame
+        end
+        end
+    end)
+    
+tab:Line()
+tab:Label("Auto collects")
+
+tab:Toggle("Auto collect Chi"," ",false,function(t)
+
+_G.A = t 
+if _G.A == false then return end
+while _G.A do wait()
+    self.CFrame = game:GetService("Workspace").spawnedCoins.Valley["Blue Chi Crate"].CFrame
+    wait()
+end
+end)
+tab:Line()
+tab:Label("Auto Upgrades")
+
+tab:Toggle("Auto Upgrades Swords", "Auto Buy Swords", false, function(t)
+
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+
+        local string_1 = "buyAllSwords";
+local string_2 = "Inner Peace Island";
+local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+Target:FireServer(string_1, string_2);
+end
+end)
+
+tab:Toggle("Auto Upgrades Belts", "Auto Buy Belts", false, function(t)
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+
+        local string_1 = "buyAllBelts";
+        local string_2 = "Inner Peace Island";
+        local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+        Target:FireServer(string_1, string_2);
+    end
+end)
+
+tab:Toggle("Auto Upgrades Shurikens", "Auto Buy Shurikens", false, function(t)
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+
+        local string_1 = "buyAllShurikens";
+        local string_2 = "Inner Peace Island";
+        local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+        Target:FireServer(string_1, string_2);
+    end
+end)
+
+tab:Toggle("Auto Upgrades Ranks", "Auto Buy Ranks", false, function(t)
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+
+        local string_1 = "buyAllRanks";
+        local string_2 = "Inner Peace Island";
+        local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+        Target:FireServer(string_1, string_2);
+    end
+end)
+
+tab:Toggle("Auto Upgrades Skills", "Auto Buy skills", false, function(t)
+_G.A = t 
+if _G.A == false then return end
+while _G.A do wait()
+    
+    local string_1 = "buyAllSkills";
+    local string_2 = "Inner Peace Island";
+    local Target = game:GetService("Players")["LocalPlayer"].ninjaEvent;
+    Target:FireServer(string_1, string_2);
+end
+end)
+
+local tab = win:Tab("Boss Farm", "http://www.roblox.com/asset/?id=6023426945")
+
+tab:Toggle("AncientMagmaBoss"," ",false,function(t)
+    
+_G.A = t 
+if _G.A == false then return end
+while _G.A do wait()
+for i,v in pairs(game:GetService("Workspace").bossFolder:GetChildren()) do
+    if v.Name == "AncientMagmaBoss" then
+        repeat
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton1(Vector2.new(50, 50), CFrame.new(Vector3.new(0, 0, 0)))
+            wait()
+            plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+            until v.Humanoid.Health <= 0 or _G.A == false
+        end
+end
+end
+end)
+
+tab:Line()
+
+tab:Toggle("EternalBoss","",false,function(t)
+    
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+    
+    for i,v in pairs(game:GetService("Workspace").bossFolder:GetChildren()) do
+        if v.Name == "EternalBoss" then
+            repeat
+                VirtualUser:CaptureController()
+                VirtualUser:ClickButton1(Vector2.new(50, 50), CFrame.new(Vector3.new(0, 0, 0)))
+                wait()
+                plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+                until v.Humanoid.Health <= 0 or _G.A == false
+            end
+    end
+    end
+    end)
+
+    tab:Line()
+
+    tab:Toggle("RobotBoss"," ",false,function(t)
+    
+    _G.A = t 
+    if _G.A == false then return end
+    while _G.A do wait()
+        
+    for i,v in pairs(game:GetService("Workspace").bossFolder:GetChildren()) do
+        if v.Name == "RobotBoss" then
+            repeat
+                VirtualUser:CaptureController()
+                VirtualUser:ClickButton1(Vector2.new(50, 50), CFrame.new(Vector3.new(0, 0, 0)))
+                wait()
+                plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,0)
+                until v.Humanoid.Health <= 0 or _G.A == false
+            end
+    end
+    end
+    end)
+    
+
+local tab = win:Tab("Teleport", "http://www.roblox.com/asset/?id=6023426945")
+
+tab:Button("Teleport All Islands", "Teleport All Islands",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Enchanted Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Astral Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Mystical Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Space Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Tundra Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Eternal Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Sandstorm"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Sandstormisland"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Ancient Inferno Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Midnight Shadow Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Mythical Souls Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Winter Wonder Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Golden Master Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Dragon Legend Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Cybernetic Legends Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Skystorm Ultraus Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Soul Fusion Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Dark Elements Island"].islandSignPart.CFrame
+    wait(1.5)
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Inner Peace Island"].islandSignPart.CFrame
+    wait(1.5)
+end)
+
+tab:Line()
+
+tab:Button("Sell" ,"" , function()
+    self.CFrame = game:GetService("Workspace").sellAreaCircles.sellAreaCircle16.circleSignPart.CFrame * CFrame.new(0,-10,0)
+
+end)
+
+tab:Button("Shop","",function()
+    self.CFrame = game:GetService("Workspace").shopAreaCircles.shopAreaCircle18.circleSignPart.CFrame * CFrame.new(0,-10,0)
+end)
+
+tab:Button("Skill","",function()
+    self.CFrame = game:GetService("Workspace").skillAreaCircles.skillsAreaCircle18.circleSignPart.CFrame * CFrame.new(0,-10,0)
+end)
+tab:Button("Enchaned Island","", function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Enchanted Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+    
+end)
+tab:Button("Astral Island", "", function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Astral Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+    
+end)
+tab:Button("Mystical Island", "", function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Mystical Island"].islandSignPart.CFrame * CFrame.new(0,-70,0)
+    
+end)
+tab:Button("Space Island", "", function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Space Island"].islandSignPart.CFrame * CFrame.new(0,-175,0)
+    
+end)
+tab:Button("Tundra Island", "", function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Tundra Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+    
+end)
+ tab:Button("Eternal Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Eternal Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Sandstorm","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Sandstorm"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Thunderstorm","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Thunderstorm"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Ancient Inferno Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Ancient Inferno Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Midnight Shadow Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Midnight Shadow Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Mythical Souls Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Mythical Souls Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Winter Wonder Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Winter Wonder Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Golden Master Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Golden Master Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Dragon Legend Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Dragon Legend Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Cybernetic Legends Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Cybernetic Legends Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Skystorm Ultraus Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Skystorm Ultraus Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Chaos Legends Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Chaos Legends Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Soul Fusion Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Soul Fusion Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Dark Elements Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Dark Elements Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+ tab:Button("Inner Peace Island","",function()
+    self.CFrame = game:GetService("Workspace").islandUnlockParts["Inner Peace Island"].islandSignPart.CFrame * CFrame.new(0,-80,0)
+end)
+
+local tab = win:Tab("Misc", "http://www.roblox.com/asset/?id=6023426945")
+
+tab:Slider("Walkspeed", "",16,300,0,function(value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+tab:Slider("JumpPower", "",50,300,0,function(value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+end)
