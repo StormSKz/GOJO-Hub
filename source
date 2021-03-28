@@ -23,6 +23,7 @@ while _G.A do wait(0.00001)
 end)
 
 tab:Toggle("Auto Sell", "Auto sells Ninjitsu", false, function(t)
+
     _G.A = t 
 if _G.A == false then return end
 while _G.A do wait(0.00001)
@@ -316,7 +317,7 @@ end)
 tab:Slider("JumpPower", "",50,300,0,function(value)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 end)
-tab:Button("Anti AFK","",function()
+tab:Toggle("Anti AFK","",function()
     local vu = game:GetService("VirtualUser")
     game:GetService("Players")["LocalPlayer"].Idled:connectfunction()
     vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
